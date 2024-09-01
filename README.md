@@ -1,6 +1,3 @@
-Claro, aquí está el contenido completo del `README.md` en formato texto para tu aplicación de reservas de cabañas:
-
-```markdown
 <p align="center">
   <a href="https://example.com">
     <img src="https://via.placeholder.com/1200x400?text=Caba%C3%B1as+Reserva" width="800" alt="Cabañas Reserva Banner">
@@ -108,7 +105,6 @@ Para comenzar a usar la aplicación:
    ```
 4. **Sube tus cambios** y abre un Pull Request en GitHub.
 
-
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
@@ -121,6 +117,3 @@ Para cualquier pregunta o comentario, puedes contactarnos en:
 - **GitHub**: [https://github.com/tu_usuario/cabanas-reserva](https://github.com/tu_usuario/cabanas-reserva)
 
 ¡Gracias por usar **Cabañas Reserva**!
-```
-
-Puedes copiar y pegar este contenido en un archivo `README.md` para tu repositorio de GitHub. Asegúrate de reemplazar los enlaces de ejemplo y las direcciones de contacto con la información específica de tu proyecto y tu cuenta.
