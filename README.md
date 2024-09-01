@@ -1,3 +1,6 @@
+Claro, aquí está el contenido completo del `README.md` en formato texto para tu aplicación de reservas de cabañas:
+
+```markdown
 <p align="center">
   <a href="https://example.com">
     <img src="https://via.placeholder.com/1200x400?text=Caba%C3%B1as+Reserva" width="800" alt="Cabañas Reserva Banner">
@@ -47,3 +50,77 @@ Para instalar y configurar la aplicación localmente, sigue estos pasos:
    ```bash
    git clone https://github.com/tu_usuario/cabanas-reserva.git
    cd cabanas-reserva
+   ```
+
+2. **Instala las Dependencias**:
+   Asegúrate de tener Composer y npm instalados.
+   ```bash
+   composer install
+   npm install
+   ```
+
+3. **Configura el Archivo de Entorno**:
+   Copia el archivo de ejemplo y edítalo para tu entorno local:
+   ```bash
+   cp .env.example .env
+   ```
+
+   Actualiza el archivo `.env` con tus configuraciones de base de datos y otras configuraciones necesarias.
+
+4. **Genera la Clave de Aplicación**:
+   ```bash
+   php artisan key:generate
+   ```
+
+5. **Migra la Base de Datos**:
+   ```bash
+   php artisan migrate
+   ```
+
+6. **Inicia el Servidor Local**:
+   ```bash
+   php artisan serve
+   ```
+
+   La aplicación estará disponible en [http://localhost:8000](http://localhost:8000).
+
+## Uso
+
+Para comenzar a usar la aplicación:
+
+1. Regístrate como usuario o administrador.
+2. Explora las cabañas disponibles y usa los filtros para encontrar la que mejor se adapte a tus necesidades.
+3. Realiza reservas y administra tus reservas desde tu perfil de usuario.
+4. Los administradores pueden gestionar cabañas y reservas desde el panel de administración.
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Para colaborar, sigue estos pasos:
+
+1. **Haz un Fork** del repositorio.
+2. **Crea una Rama** para tu característica o corrección:
+   ```bash
+   git checkout -b mi-nueva-caracteristica
+   ```
+3. **Haz Commit** de tus cambios:
+   ```bash
+   git commit -m "Añadida nueva característica"
+   ```
+4. **Sube tus cambios** y abre un Pull Request en GitHub.
+
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+## Contacto
+
+Para cualquier pregunta o comentario, puedes contactarnos en:
+
+- **Correo Electrónico**: contacto@cabanasreserva.com
+- **GitHub**: [https://github.com/tu_usuario/cabanas-reserva](https://github.com/tu_usuario/cabanas-reserva)
+
+¡Gracias por usar **Cabañas Reserva**!
+```
+
+Puedes copiar y pegar este contenido en un archivo `README.md` para tu repositorio de GitHub. Asegúrate de reemplazar los enlaces de ejemplo y las direcciones de contacto con la información específica de tu proyecto y tu cuenta.
