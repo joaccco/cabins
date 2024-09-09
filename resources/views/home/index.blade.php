@@ -20,14 +20,16 @@
                             <img class="justify-center xl:ml-2 lg:ml-2 lg:px-8 xl:w-48 2xl:w-48 lg:w-48 w-24 mt-12"
                                 src="/img/logo.png" alt="Your Company">
                         </div>
-                        <div class="flex mt-6 flex-col w-full sticky md:top-36 lg:w-3/4 md:mt-12 px-8">
+                        <div
+                            class="flex mt-6 flex-col w-full sticky md:top-36 lg:w-3/4 md:mt-12 px-8 cursor-hover-container">
                             <div class="text-center">
-                                <h1 class="text-4xl font-semibold text-gray-900 sm:text-6xl">Bienvenidos a <br>
+                                <h1 class="text-4xl font-semibold text-gray-800 sm:text-6xl">Bienvenidos a <br>
                                     <span class="font-bold">Cabañas los Primos</span>
                                 </h1>
                                 <p class="mt-6 text-xl text-gray-600">Rústico encanto, comodidad en cada rincón</p>
                             </div>
                         </div>
+
                         <div class="mt-12 mb-12" id="loader"></div>
                         <a href="https://wa.me/c/">
                             <button class="p-2 px-2 bg-green-500 text-black rounded-2xl flex items-center space-x-2">
@@ -79,36 +81,60 @@
         </div>
 
         <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-neutral-800 text-white"
-        style="background-size: cover; background-image: url('https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-        <div
-            class="backdrop-blur-2xl bg-black/20 rounded-2xl flex flex-col w-3/4 lg:w-1/3 justify-center items-start p-8">
-            <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">Contáctanos</h2>
-            <p class="text-sm md:text-base text-gray-50 mb-4">¿Tienes alguna consulta o deseas ser parte de nuestra
-                familia? Rellena el siguiente formulario y nos pondremos en contacto contigo.</p>
-            <form action="/submit_contact" method="POST" class="w-full">
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-50">Nombre</label>
-                    <input type="text" id="name" name="name"
-                        class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-50">Correo Electrónico</label>
-                    <input type="email" id="email" name="email"
-                        class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-sm font-medium text-gray-50">Mensaje</label>
-                    <textarea id="message" name="message" rows="4"
-                        class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-md">Enviar
-                    Mensaje</button>
-            </form>
+            style="background-size: cover; background-image: url('https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+            <div
+                class="backdrop-blur-2xl bg-black/20 rounded-2xl flex flex-col w-3/4 lg:w-1/3 justify-center items-start p-8">
+                <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">Contáctanos</h2>
+                <p class="text-sm md:text-base text-gray-50 mb-4">¿Tienes alguna consulta o deseas ser parte de nuestra
+                    familia? Rellena el siguiente formulario y nos pondremos en contacto contigo.</p>
+                <form action="/submit_contact" method="POST" class="w-full">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-50">Nombre</label>
+                        <input type="text" id="name" name="name"
+                            class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-50">Correo Electrónico</label>
+                        <input type="email" id="email" name="email"
+                            class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-sm font-medium text-gray-50">Mensaje</label>
+                        <textarea id="message" name="message" rows="4"
+                            class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-md">Enviar
+                        Mensaje</button>
+                </form>
+            </div>
         </div>
     </div>
-    </div>
+    <style>
+        .cursor-hover-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cursor-hover-container:hover h1,
+        .cursor-hover-container:hover p {
+            font-weight: 900;
+            /* O un peso más grande */
+            color: black;
+            transition: all 0.2s ease;
+            /* Suaviza la transición del efecto */
+        }
+    </style>
     <script>
+        const followCursorContainer = document.querySelector('.cursor-hover-container');
+
+        followCursorContainer.addEventListener('mouseover', () => {
+            const elements = followCursorContainer.querySelectorAll('h1, p');
+            elements.forEach((elem) => {
+                elem.style.fontWeight = '600'; // O cualquier estilo
+            })
+        });
+
         document.getElementById('scroll-down-button').addEventListener('click', function() {
             window.scrollBy({
                 top: window.innerHeight,
