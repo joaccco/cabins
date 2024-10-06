@@ -42,7 +42,7 @@
     <!--sidenav -->
     <div id="sidebar" class="fixed left-0 top-0 w-64 h-full bg-[#f8f4f3] p-4 z-50 sidebar-menu overflow-scroll">
         <a href="/" class="flex pb-4">
-            <img class="flex mx-auto px-8 w-36 mt-4" src="/img/rino-black.png" alt="Your Company">
+            <img class="flex mx-auto px-8 w-36 mt-4" src="/img/logo.png" alt="Your Company">
         </a>
         <ul class="mt-4">
             <li class="mb-1 group">
@@ -60,38 +60,31 @@
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="{{ route('admin.notifications.index') }}"
+                <a href="#"
                     class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-notification-3-fill mr-3 text-lg"></i>
                     <span class="text-sm">Notificaciones</span>
                     <span
-                        class=" md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-600 bg-red-200 rounded-full">{{ count($user->notifications) }}</span>
+                        class=" md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-600 bg-red-200 rounded-full">{{-- {{ count($user->notifications) }} --}}</span>
                 </a>
             </li>
             <span class="text-gray-400 font-bold">Tienda</span>
             <li class="mb-1 group">
-                <a href="{{ route('admin.stock.index') }}"
+                <a href="#"
                     class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-funds-fill mr-3 text-lg"></i>
-                    <span class="text-sm">Stock</span>
+                    <span class="text-sm">Disponibilidad Cabañas</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="{{ route('admin.orders.index') }}"
+                <a href="#"
                     class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class='ri-shopping-bag-line mr-3 text-lg'></i>
-                    <span class="text-sm">Pedidos</span>
+                    <span class="text-sm">Descuentos</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="{{ route('admin.ventas.index') }}"
-                    class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
-                    <i class="ri-funds-box-fill mr-3 text-lg"></i>
-                    <span class="text-sm">Ventas</span>
-                </a>
-            </li>
-            <li class="mb-1 group">
-                <a href="{{ route('admin.sales.index') }}"
+                <a href="#"
                     class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-percent-line mr-3 text-lg"></i>
                     <span class="text-sm">Promociones</span>
@@ -99,50 +92,42 @@
             </li>
             <span class="text-gray-400 font-bold">Administrar</span>
             <li class="mb-1 group">
-                <a href="{{ route('admin.products.index') }}"
+                <a href="#"
                     class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-t-shirt-fill mr-3 text-lg"></i>
-                    <span class="text-sm">Productos</span>
+                    <span class="text-sm">Cabañas</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="{{ route('admin.combos.index') }}"
+                <a href="#"
                     class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class='ri-handbag-fill mr-3 text-lg'></i>
-                    <span class="text-sm">Combos</span>
+                    <span class="text-sm">Pagos</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href={{ route('admin.categories.index') }}
+                <a href="#"
                     class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class='bx bx-archive mr-3 text-lg'></i>
-                    <span class="text-sm">Categorias</span>
+                    <span class="text-sm">Reviews</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="{{ route('admin.categories.index') }}"
+                <a href="#"
                     class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-folders-line mr-3 text-lg"></i>
-                    <span class="text-sm">Subcategorias</span>
+                    <span class="text-sm">Reservas</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="{{ route('admin.brands.index') }}"
-                    class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
-                    <i class='ri-barcode-box-fill mr-3 text-lg'></i>
-                    <span class="text-sm">Marcas</span>
-                </a>
-            </li>
-            <span class="text-gray-400 font-bold">Gestion de Tienda</span>
-            <li class="mb-1 group">
-                <a href="{{ route('admin.mystore.index') }}"
+                <a href="#"
                     class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-store-2-line mr-3 text-lg"></i>
-                    <span class="text-sm">Mi Tienda</span>
+                    <span class="text-sm">Estadisticas</span>
                 </a>
             </li>
             <li class="mb-1 group">
-                <a href="{{ route('admin.users.index') }}"
+                <a href="#"
                     class="flex font-semibold items-center py-2 px-4 text-gray-900 transition hover:bg-blue-500 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-team-fill mr-3 text-lg"></i>
                     <span class="text-sm">Roles y Permisos</span>
@@ -163,7 +148,7 @@
             </button>
             <div class="p-2 md:block text-left">
                 <h2 class="text-xl font-thin text-gray-800">Hola, <span class="uppercase font-extrabold font-blinker">
-                        {{ $user->name }}</span> 👋🏻</h2>
+                        {{-- {{ $user->name }} --}}</span> 👋🏻</h2>
             </div>
 
             <ul class="ml-auto flex items-center">
@@ -226,7 +211,7 @@
                                 data-page="notifications">
                                 <ul class="max-h-64 overflow-y-auto " data-tab-for="notification"
                                     data-page="notifications">
-                                    @foreach ($pendingOrders as $order)
+                                    {{-- @foreach ($pendingOrders as $order)
                                         <li class="relative mt-2 p-8 group border-t border-gray-200 last:border-0">
                                             <div class="flex">
                                                 <time
@@ -250,7 +235,7 @@
                                                 <p class="ml-2">{{ $order->user->email }}</p>
                                             </div>
                                         </li>
-                                    @endforeach
+                                    @endforeach --}}
                                 </ul>
 
                             </ul>

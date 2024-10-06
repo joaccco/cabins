@@ -44,9 +44,118 @@
                     </div>
                 </div>
                 <div class="col-span-3">
-                    <div class="bg-black/30 rounded-lg w-full h-full">
-                        <div id="calendar" class="p-4"></div>
+                    <div class="bg-black/30 rounded-lg w-full h-full p-4">
+                        <h3 class="text-white text-lg mb-4">Selecciona tus fechas de reserva</h3>
+
+                        <label class="text-white">Fecha de ingreso:</label>
+                        <input id="check-in" type="text" class="w-full p-2 mb-4 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Selecciona la fecha de ingreso">
+
+                        <label class="text-white">Fecha de salida:</label>
+                        <input id="check-out" type="text" class="w-full p-2 mb-4 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Selecciona la fecha de salida">
+
+                        <!-- Aquí se mostrará el calendario -->
+                        <div id='calendar' class="max-w-3xl shadow-lg mt-4 rounded-lg overflow-hidden bg-white border border-gray-300">
+                            <!-- Aquí irá el contenido del calendario -->
+                        </div>
+
                     </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-purple-600 text-white"
+            style="background-size: cover; background-image: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=3276&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+            <div
+                class="backdrop-blur-2xl bg-black/20 rounded-2xl flex flex-col w-full lg:w-3/4 justify-center items-start p-8">
+                <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-4">Cabañas Disponibles</h2>
+                <p class="text-sm md:text-base text-gray-50 mb-6">Encuentra la cabaña perfecta para tu próxima escapada.
+                    Usa los filtros para ajustar la búsqueda según tus necesidades.</p>
+
+                <!-- Filtros de búsqueda -->
+                <div class="w-full mb-6">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <select class="w-full p-2 rounded bg-gray-100 text-gray-700" name="ubicacion">
+                            <option value="">Seleccionar Ubicación</option>
+                            <option value="montaña">Montaña</option>
+                            <option value="playa">Playa</option>
+                            <option value="campo">Campo</option>
+                        </select>
+                        <select class="w-full p-2 rounded bg-gray-100 text-gray-700" name="capacidad">
+                            <option value="">Capacidad</option>
+                            <option value="2">2 Personas</option>
+                            <option value="4">4 Personas</option>
+                            <option value="6">6 Personas</option>
+                        </select>
+                        <select class="w-full p-2 rounded bg-gray-100 text-gray-700" name="tipo">
+                            <option value="">Tipo de Cabaña</option>
+                            <option value="familiar">Familiar</option>
+                            <option value="romantica">Romántica</option>
+                            <option value="lujo">De Lujo</option>
+                        </select>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <select class="w-full p-2 rounded bg-gray-100 text-gray-700" name="servicios">
+                            <option value="">Servicios</option>
+                            <option value="piscina">Piscina</option>
+                            <option value="jacuzzi">Jacuzzi</option>
+                            <option value="wifi">WiFi</option>
+                            <option value="pet">Pet-Friendly</option>
+                        </select>
+                        <input type="text" class="w-full p-2 rounded bg-gray-100 text-gray-700"
+                            placeholder="Rango de precios" name="precio" />
+                        <button
+                            class="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-all">Buscar</button>
+                    </div>
+                </div>
+
+                <!-- Galería de cabañas -->
+                <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Cabaña 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300" alt="Cabaña 1"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Cabaña en la Montaña</h3>
+                            <p class="text-sm text-gray-600">Capacidad: 4 personas | WiFi, Piscina</p>
+                            <p class="text-xl font-bold text-gray-800 mt-2">$150 por noche</p>
+                            <button
+                                class="w-full mt-4 bg-purple-600 text-white rounded py-2 hover:bg-purple-700 transition-all">Reservar</button>
+                        </div>
+                    </div>
+                    <!-- Cabaña 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300" alt="Cabaña 2"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Cabaña Romántica en la Playa</h3>
+                            <p class="text-sm text-gray-600">Capacidad: 2 personas | Jacuzzi, WiFi</p>
+                            <p class="text-xl font-bold text-gray-800 mt-2">$200 por noche</p>
+                            <button
+                                class="w-full mt-4 bg-purple-600 text-white rounded py-2 hover:bg-purple-700 transition-all">Reservar</button>
+                        </div>
+                    </div>
+                    <!-- Cabaña 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://via.placeholder.com/400x300" alt="Cabaña 3"
+                            class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800">Cabaña Familiar en el Campo</h3>
+                            <p class="text-sm text-gray-600">Capacidad: 6 personas | Pet-Friendly, WiFi</p>
+                            <p class="text-xl font-bold text-gray-800 mt-2">$120 por noche</p>
+                            <button
+                                class="w-full mt-4 bg-purple-600 text-white rounded py-2 hover:bg-purple-700 transition-all">Reservar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comparar cabañas -->
+                <div class="w-full mt-6">
+                    <h3 class="text-2xl mb-4">Comparar Cabañas</h3>
+                    <button
+                        class="bg-transparent border border-white text-white py-2 px-4 rounded hover:bg-blue-800 hover:border-transparent transition-all">Comparar
+                        Seleccionadas</button>
                 </div>
             </div>
         </div>
@@ -55,58 +164,91 @@
             style="background-size: cover; background-image: url('https://images.unsplash.com/photo-1601599561213-832382fd07ba?q=80&w=3328&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
             <div
                 class="backdrop-blur-2xl bg-black/20 rounded-2xl flex flex-col w-full lg:w-1/3 justify-center items-start p-8">
-                <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">Productos</h2>
-                <p class="text-sm md:text-base text-gray-50 mb-4">Explora Nuestros distintos productos, creados para
-                    acompañar tus mejores momentos y refrescar tus experiencias</p>
-                <a href="/products"
+                <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">Sitios Turísticos</h2>
+                <p class="text-sm md:text-base text-gray-50 mb-4">Descubre los lugares más visitados y emblemáticos de
+                    nuestra
+                    región. Estos sitios turísticos te dejarán sin aliento con su belleza y cultura.</p>
+                <a href="/tourist-spots"
                     class="mt-10 bg-transparent hover:bg-blue-800 text-white rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent">Ver
-                    los productos</a>
+                    más lugares</a>
             </div>
         </div>
 
-        <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-purple-600 text-white"
-            style="background-size: cover; background-image: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=3276&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-            <div
-                class="backdrop-blur-2xl bg-black/20 rounded-2xl flex flex-col w-3/4 lg:w-1/3 justify-center items-start p-8">
-                <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">Origen de la fabrica</h2>
-                <p class="text-sm md:text-base text-gray-50 mb-4">Conoce nuestra historia, conoce la razon de inicio de
-                    este
-                    proyecto y nuestro compromiso con nuestros clientes.</p>
-                <a href="/origin"
-                    class="mt-10 bg-transparent hover:bg-blue-800 text-white rounded shadow hover:shadow-lg py-2 px-4 border border-white hover:border-transparent">Conocer
-                    Historia</a>
+        <!-- Sección adicional de sitios turísticos -->
+
+        <div class="w-full flex flex-col lg:flex-row justify-center items-center bg-indigo-600 text-white py-12 px-4">
+            <!-- Primer sitio turístico -->
+            <div class="max-w-md p-6 bg-white/20 rounded-lg m-4 backdrop-blur-2xl">
+                <img src="https://images.unsplash.com/photo-1543248930-e7ad442a9c5f?ixlib=rb-4.0.3&q=80&fit=crop&w=500"
+                    alt="Cataratas del Iguazú" class="rounded-lg mb-4">
+                <h3 class="text-2xl font-bold mb-2">Cataratas del Iguazú</h3>
+                <p class="text-sm text-gray-200 mb-4">Uno de los destinos más espectaculares del mundo, las Cataratas
+                    del
+                    Iguazú ofrecen una experiencia única con su inmensidad y su belleza natural.</p>
+                <a href="/tourist-spots/iguazu"
+                    class="bg-transparent hover:bg-blue-800 text-white rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent">Descubre
+                    más</a>
+            </div>
+
+            <!-- Segundo sitio turístico -->
+            <div class="max-w-md p-6 bg-white/20 rounded-lg m-4 backdrop-blur-2xl">
+                <img src="https://images.unsplash.com/photo-1509358277551-17c2aef6d26c?ixlib=rb-4.0.3&q=80&fit=crop&w=500"
+                    alt="Glaciar Perito Moreno" class="rounded-lg mb-4">
+                <h3 class="text-2xl font-bold mb-2">Glaciar Perito Moreno</h3>
+                <p class="text-sm text-gray-200 mb-4">Una maravilla natural en la Patagonia, el Glaciar Perito Moreno es
+                    uno de
+                    los glaciares más importantes del mundo y un destino imperdible para los amantes de la naturaleza.
+                </p>
+                <a href="/tourist-spots/perito-moreno"
+                    class="bg-transparent hover:bg-blue-800 text-white rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent">Explora
+                    este lugar</a>
+            </div>
+
+            <!-- Tercer sitio turístico -->
+            <div class="max-w-md p-6 bg-white/20 rounded-lg m-4 backdrop-blur-2xl">
+                <img src="https://images.unsplash.com/photo-1519207711697-1d20efb41d76?ixlib=rb-4.0.3&q=80&fit=crop&w=500"
+                    alt="Bariloche" class="rounded-lg mb-4">
+                <h3 class="text-2xl font-bold mb-2">Bariloche</h3>
+                <p class="text-sm text-gray-200 mb-4">Famoso por sus paisajes de montaña y sus lagos, Bariloche es el
+                    destino
+                    ideal tanto en invierno para esquiar como en verano para explorar la naturaleza.</p>
+                <a href="/tourist-spots/bariloche"
+                    class="bg-transparent hover:bg-blue-800 text-white rounded shadow hover:shadow-lg py-2 px-4 border border-blue-300 hover:border-transparent">Conoce
+                    más</a>
             </div>
         </div>
+
 
         <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-neutral-800 text-white"
-        style="background-size: cover; background-image: url('https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
-        <div
-            class="backdrop-blur-2xl bg-black/20 rounded-2xl flex flex-col w-3/4 lg:w-1/3 justify-center items-start p-8">
-            <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">Contáctanos</h2>
-            <p class="text-sm md:text-base text-gray-50 mb-4">¿Tienes alguna consulta o deseas ser parte de nuestra
-                familia? Rellena el siguiente formulario y nos pondremos en contacto contigo.</p>
-            <form action="/submit_contact" method="POST" class="w-full">
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-50">Nombre</label>
-                    <input type="text" id="name" name="name"
-                        class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-50">Correo Electrónico</label>
-                    <input type="email" id="email" name="email"
-                        class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600">
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-sm font-medium text-gray-50">Mensaje</label>
-                    <textarea id="message" name="message" rows="4"
-                        class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
-                </div>
-                <button type="submit"
-                    class="w-full bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-md">Enviar
-                    Mensaje</button>
-            </form>
+            style="background-size: cover; background-image: url('https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+            <div
+                class="backdrop-blur-2xl bg-black/20 rounded-2xl flex flex-col w-3/4 lg:w-1/3 justify-center items-start p-8">
+                <h2 class="text-3xl md:text-5xl leading-relaxed md:leading-snug mb-2">Contáctanos</h2>
+                <p class="text-sm md:text-base text-gray-50 mb-4">¿Tienes alguna consulta o deseas ser parte de nuestra
+                    familia? Rellena el siguiente formulario y nos pondremos en contacto contigo.</p>
+                <form action="/submit_contact" method="POST" class="w-full">
+                    <div class="mb-4">
+                        <label for="name" class="block text-sm font-medium text-gray-50">Nombre</label>
+                        <input type="text" id="name" name="name"
+                            class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium text-gray-50">Correo
+                            Electrónico</label>
+                        <input type="email" id="email" name="email"
+                            class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-sm font-medium text-gray-50">Mensaje</label>
+                        <textarea id="message" name="message" rows="4"
+                            class="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-md">Enviar
+                        Mensaje</button>
+                </form>
+            </div>
         </div>
-    </div>
     </div>
     <script>
         document.getElementById('scroll-down-button').addEventListener('click', function() {
@@ -131,4 +273,84 @@
             calendar.render();
         });
     </script>
+    <script>
+        // Inicializar Flatpickr para el check-in
+        flatpickr("#check-in", {
+            dateFormat: "Y-m-d",
+            minDate: "today", // Desactivar fechas pasadas
+        });
+
+        // Inicializar Flatpickr para el check-out
+        flatpickr("#check-out", {
+            dateFormat: "Y-m-d",
+            minDate: "today", // Desactivar fechas pasadas
+        });
+    </script>
+    <script>
+        // Variables para las fechas seleccionadas
+        let checkInDate;
+        let checkOutDate;
+
+        // Inicializar Flatpickr para el check-in
+        flatpickr("#check-in", {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            onChange: function(selectedDates) {
+                checkInDate = selectedDates[0];
+                updateCalendar();
+            }
+        });
+
+        // Inicializar Flatpickr para el check-out
+        flatpickr("#check-out", {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            onChange: function(selectedDates) {
+                checkOutDate = selectedDates[0];
+                updateCalendar();
+            }
+        });
+
+        // Inicializar FullCalendar
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarEl = document.getElementById('calendar');
+            const calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                selectable: true,
+                events: [], // Aquí se añadirán las fechas seleccionadas
+
+                // Función para actualizar las fechas seleccionadas en el calendario
+                eventDidMount: function(info) {
+                    info.el.style.backgroundColor = '#4CAF50'; // Color de fondo para las fechas seleccionadas
+                    info.el.style.color = 'white'; // Color del texto para las fechas seleccionadas
+                }
+            });
+
+            calendar.render();
+
+            // Función para actualizar el calendario con las fechas seleccionadas
+            function updateCalendar() {
+                // Limpiar eventos existentes
+                calendar.removeAllEvents();
+
+                if (checkInDate) {
+                    calendar.addEvent({
+                        title: 'Fecha de ingreso',
+                        start: checkInDate,
+                        allDay: true
+                    });
+                }
+
+                if (checkOutDate) {
+                    calendar.addEvent({
+                        title: 'Fecha de salida',
+                        start: checkOutDate,
+                        allDay: true
+                    });
+                }
+            }
+        });
+    </script>
+
+
 </x-app-layout>
