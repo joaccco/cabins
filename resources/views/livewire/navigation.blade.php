@@ -87,6 +87,7 @@
 
 <!-- JavaScript to handle mobile menu toggle -->
 <script>
+    z
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -94,3 +95,4 @@
         mobileMenu.classList.toggle('hidden');
     });
 </script>
+

@@ -20,14 +20,16 @@
                             <img class="justify-center xl:ml-2 lg:ml-2 lg:px-8 xl:w-48 2xl:w-48 lg:w-48 w-24 mt-12"
                                 src="/img/logo.png" alt="Your Company">
                         </div>
-                        <div class="flex mt-6 flex-col w-full sticky md:top-36 lg:w-3/4 md:mt-12 px-8">
+                        <div
+                            class="flex mt-6 flex-col w-full sticky md:top-36 lg:w-3/4 md:mt-12 px-8 cursor-hover-container">
                             <div class="text-center">
-                                <h1 class="text-4xl font-semibold text-gray-900 sm:text-6xl">Bienvenidos a <br>
+                                <h1 class="text-4xl font-semibold text-gray-800 sm:text-6xl">Bienvenidos a <br>
                                     <span class="font-bold">Cabañas los Primos</span>
                                 </h1>
                                 <p class="mt-6 text-xl text-gray-600">Rústico encanto, comodidad en cada rincón</p>
                             </div>
                         </div>
+
                         <div class="mt-12 mb-12" id="loader"></div>
                         <a href="https://wa.me/c/">
                             <button class="p-2 px-2 bg-green-500 text-black rounded-2xl flex items-center space-x-2">
@@ -250,7 +252,31 @@
             </div>
         </div>
     </div>
+    <style>
+        .cursor-hover-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cursor-hover-container:hover h1,
+        .cursor-hover-container:hover p {
+            font-weight: 900;
+            /* O un peso más grande */
+            color: black;
+            transition: all 0.2s ease;
+            /* Suaviza la transición del efecto */
+        }
+    </style>
     <script>
+        const followCursorContainer = document.querySelector('.cursor-hover-container');
+
+        followCursorContainer.addEventListener('mouseover', () => {
+            const elements = followCursorContainer.querySelectorAll('h1, p');
+            elements.forEach((elem) => {
+                elem.style.fontWeight = '600'; // O cualquier estilo
+            })
+        });
+
         document.getElementById('scroll-down-button').addEventListener('click', function() {
             window.scrollBy({
                 top: window.innerHeight,
