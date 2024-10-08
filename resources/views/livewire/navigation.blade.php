@@ -32,6 +32,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="/posts"
+                        class="block py-2 pr-4 pl-3 text-black rounded hover:bg-gray-200 md:hover:text-blue-600 md:p-0">
+                        Posts
+                    </a>
+                </li>
+                <li>
                     <a href="/cabins"
                         class="block py-2 pr-4 pl-3 text-black rounded hover:bg-gray-200 md:hover:text-blue-600 md:p-0">
                         Cabañas

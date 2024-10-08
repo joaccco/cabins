@@ -21,7 +21,7 @@
                                 src="/img/logo.png" alt="Your Company">
                         </div>
                         <div
-                            class="flex mt-6 flex-col w-full sticky md:top-36 lg:w-3/4 md:mt-12 px-8 cursor-hover-container">
+                            class="flex mt-6 mb-12 flex-col w-full sticky md:top-36 lg:w-3/4 md:mt-12 px-8 cursor-hover-container">
                             <div class="text-center">
                                 <h1 class="text-4xl font-semibold text-gray-800 sm:text-6xl">Bienvenidos a <br>
                                     <span class="font-bold">Cabañas los Primos</span>
@@ -49,19 +49,37 @@
                     <div class="bg-black/30 rounded-lg w-full h-full p-4">
                         <h3 class="text-white text-lg mb-4">Selecciona tus fechas de reserva</h3>
 
-                        <label class="text-white">Fecha de ingreso:</label>
-                        <input id="check-in" type="text" class="w-full p-2 mb-4 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Selecciona la fecha de ingreso">
+                        <form action="{{ route('store.reservation') }}" method="POST">
+                            @csrf
+                            <!-- Fecha de ingreso -->
+                            <label class="text-white">Fecha de ingreso:</label>
+                            <input name="check_in_date" type="date" class="w-full p-2 mb-4 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
 
-                        <label class="text-white">Fecha de salida:</label>
-                        <input id="check-out" type="text" class="w-full p-2 mb-4 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Selecciona la fecha de salida">
+                            <!-- Fecha de salida -->
+                            <label class="text-white">Fecha de salida:</label>
+                            <input name="check_out_date" type="date" class="w-full p-2 mb-4 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
 
-                        <!-- Aquí se mostrará el calendario -->
-                        <div id='calendar' class="max-w-3xl shadow-lg mt-4 rounded-lg overflow-hidden bg-white border border-gray-300">
-                            <!-- Aquí irá el contenido del calendario -->
-                        </div>
+                            <!-- Selección de cabaña -->
+                            <label class="text-white">Selecciona la cabaña:</label>
+                            <select name="cabin_id" class="w-full p-2 mb-4 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                                @foreach($cabins as $cabin)
+                                    <option value="{{ $cabin->id }}">{{ $cabin->name }}</option>
+                                @endforeach
+                            </select>
 
+                            <button type="submit" class="bg-green-500 text-white p-2 rounded">Reservar</button>
+                        </form>
+
+                        <!-- Mensaje de éxito -->
+                        @if(session('success'))
+                            <div class="bg-green-500 text-white p-4 rounded mt-4">
+                                {{ session('success') }}
+                            </div>
+                        @endif
                     </div>
                 </div>
+
+
 
 
             </div>
